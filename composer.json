@@ -1,0 +1,19 @@
+{
+    "name": "vladdesv/simple-enum",
+    "description": "Dead simple enum",
+    "homepage": "https://github.com/vladdeSV/simple-enum",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimirs Nordholm",
+            "email": "v@vladde.net",
+            "homepage": "https://vladde.net/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SimpleEnum\\": "src"
+        }
+    }
+}
