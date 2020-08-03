@@ -7,8 +7,10 @@ Dead simple PHP enum. This thing should run on PHP 5.3*, so just take the yoink 
 
 *= only tested on PHP 7.4, but PhpStorm tells me it should run fine.
 
-## Why
-I come from languages C-like languages with proper enums. Why is there no such simple, built-in, proper, enum in PHP. This should probably solve it for most of my use cases.
+## Why?
+I come from C-like languages with proper enums. Why is there no such simple, built-in, proper, enum in PHP?
+
+Other third party alternatives (see [this](https://github.com/spatie/enum), [this](https://github.com/myclabs/php-enum), and [this](https://github.com/marc-mabe/php-enum) for instance) are overly complicated for my needs. This should probably solve it for most of my use cases.
 
 ## Example
 
@@ -23,12 +25,16 @@ class MyEnum extends Enum
     public const bar = 2;
     public const baz = 3;
 }
+```
 
-// usage
+```php
+<?php
+
+use MyEnum;
 
 $value = new MyEnum(MyEnum::foo);
 
-assert($value->value() === MyEnum::foo);
+assert($value->value() === MyEnum::foo); // true
 
 ```
 
