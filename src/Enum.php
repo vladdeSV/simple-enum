@@ -17,7 +17,8 @@ abstract class Enum
      */
     final function __construct($value)
     {
-        $constants = (new ReflectionClass($this))->getConstants();
+        $reflectionClass = new ReflectionClass($this);
+        $constants = $reflectionClass->getConstants();
 
         if (!in_array($value, $constants)) {
             throw new Exception("'$value' is not valid value.");
