@@ -4,9 +4,10 @@
 ![minimum php version 7.2](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php)
 ![should run fine on php version 5.3](https://img.shields.io/badge/php-^5.3%20*-yellow?logo=php)
 
-Dead simple PHP enum. This thing should run on PHP 5.3, heck maybe even as far as 5.1.2*, so just take the yoink the file if you need it for your Legacy project.
+Dead simple PHP enum. This thing should run on PHP 5.3*, heck maybe even as far as 5.1.2**, so just yoink the file if you need it for your Legacy project.
 
-*= only tested on PHP 7.4, but PhpStorm tells me it should run fine.
+*= only tested on PHP 7.4, but PhpStorm tells me it should run fine.  
+**=this enum uses the Reflection class, which was introduced in PHP 5.1.2
 
 ## Why?
 I come from C-like languages with proper enums. Why is there no such simple, built-in, proper, enum in PHP?
