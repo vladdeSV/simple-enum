@@ -13,13 +13,16 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    border-bottom: 1px solid #eaecef;
+                    box-sizing: border-box;
                 }
                 #foo h1 {
                     position: absolute;
                     left: 0;
                     bottom: 0;
                     font-weight: 600;
-                    padding: 0.5rem 1rem 0.5rem 0;
+                    padding: 0.3em;
+                    padding-left: 0.1em;
                     margin: 0;
                     background: rgba(255, 255, 255, 0.8);
                 }
