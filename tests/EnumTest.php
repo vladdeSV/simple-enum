@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SimpleEnum\Tests;
 
 use Exception;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class EnumTest extends TestCase
+class EnumTest extends PHPUnit_Framework_TestCase
 {
     public function testCreateSimpleEnum()
     {
@@ -16,10 +14,11 @@ class EnumTest extends TestCase
         self::assertSame(TestEnum::foo, $testEnum->value());
     }
 
+    /**
+     * @expectedException Exception
+     */
     public function testFailOnInvalidValue()
     {
-        self::expectException(Exception::class);
-
         new TestEnum(1337);
     }
 }
