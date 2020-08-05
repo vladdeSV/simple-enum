@@ -1,13 +1,12 @@
 ![SimpleEnum](header.svg)
 
 ![dead simple](https://img.shields.io/badge/dead-simple-111)
-![master](https://github.com/vladdeSV/simple-enum/workflows/master/badge.svg)
 ![minimum php version](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php)
+![master](https://github.com/vladdeSV/simple-enum/workflows/master/badge.svg)
 
-Dead simple PHP enum. This thing should run on PHP 5.3*, heck maybe even as far as 5.1.2**, so just yoink the file if you need it for your Legacy project.
+Dead simple PHP enum. This thing runs on PHP 5.3, heck maybe even PHP 5.1.2*, so just yoink the file if you need it for your Legacy project.
 
-*= only tested on PHP 7.4, but PhpStorm tells me it should run fine.  
-**=this enum uses the Reflection class, which was introduced in PHP 5.1.2
+*=this enum uses the Reflection class, which was introduced in PHP 5.1.2
 
 ## Why?
 I come from C-like languages with proper enums. Why is there no such simple, built-in, proper, enum in PHP?
