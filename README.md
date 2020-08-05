@@ -1,6 +1,7 @@
 ![SimpleEnum](header.svg)
 
 ![dead simple](https://img.shields.io/badge/dead-simple-111)
+![master](https://github.com/vladdeSV/simple-enum/workflows/master/badge.svg)
 ![minimum php version 7.2](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php)
 ![should run fine on php version 5.3](https://img.shields.io/badge/php-^5.3%20*-yellow?logo=php)
 
