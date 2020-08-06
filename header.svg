@@ -26,6 +26,7 @@
                     background: white;
                     line-height: 40px;
                     color: rgb(36, 41, 46);
+                    border-top-right-radius: 1.3rem;
                 }
                 #dead-simple-wrapper {
                     width: 1000px;
