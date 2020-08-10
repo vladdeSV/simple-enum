@@ -1,7 +1,7 @@
 ![SimpleEnum](header.svg)
 
-![dead simple](https://img.shields.io/badge/dead-simple-111)
-![minimum php version](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php)
+![dead simple](https://img.shields.io/badge/dead-simple-gray?labelColor=111)
+![minimum php version](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php&labelColor=24292E)
 ![master](https://github.com/vladdeSV/simple-enum/workflows/master/badge.svg)
 
 Dead simple PHP enum. This thing runs on PHP 5.3, heck maybe even PHP 5.1.2*, so just yoink the file if you need it for your Legacy project.
