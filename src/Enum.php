@@ -13,12 +13,12 @@ abstract class Enum
     /**
      * @param mixed $value Value of the enum
      */
-    final function __construct($value)
+    final public function __construct($value)
     {
         $reflectionClass = new ReflectionClass($this);
         $constants = $reflectionClass->getConstants();
 
-        if (!in_array($value, $constants)) {
+        if (!in_array($value, $constants, true)) {
             throw new Exception("'$value' is not valid value.");
         }
 

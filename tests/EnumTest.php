@@ -15,10 +15,47 @@ class EnumTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException Exception
+     * @param $value
+     *
+     * @dataProvider validValues
      */
-    public function testFailOnInvalidValue()
+    public function testValidValues($value)
     {
-        new TestEnum(1337);
+        $testEnum = new TestEnum($value);
+
+        self::assertSame($value, $testEnum->value());
+    }
+
+    /**
+     * @expectedException Exception
+     *
+     * @dataProvider invalidValues
+     */
+    public function testInvalidValue($value)
+    {
+        new TestEnum($value);
+    }
+
+    public function validValues()
+    {
+        return array(
+            array(TestEnum::foo),
+            array(1),
+            array(TestEnum::bar),
+            array(2),
+            array(TestEnum::baz),
+            array(3),
+        );
+    }
+
+    public function invalidValues()
+    {
+        return array(
+            array(4),
+            array("1"),
+            array(null),
+            array(array(123)),
+            array((string)TestEnum::foo),
+        );
     }
 }
