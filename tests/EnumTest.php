@@ -4,6 +4,7 @@ namespace SimpleEnum\Tests;
 
 use Exception;
 use PHPUnit_Framework_TestCase;
+use stdClass;
 
 class EnumTest extends PHPUnit_Framework_TestCase
 {
@@ -52,9 +53,12 @@ class EnumTest extends PHPUnit_Framework_TestCase
     {
         return array(
             array(4),
+            array(3.2),
             array("1"),
             array(null),
             array(array(123)),
+            array(array(1,2,3)),
+            array(new stdClass()),
             array((string)TestEnum::foo),
         );
     }

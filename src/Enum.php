@@ -19,6 +19,12 @@ abstract class Enum
         $constants = $reflectionClass->getConstants();
 
         if (!in_array($value, $constants, true)) {
+
+            // if not convertible
+            if (!is_scalar($value)) {
+                $value = gettype($value);
+            }
+
             throw new Exception("'$value' is not valid value.");
         }
 
