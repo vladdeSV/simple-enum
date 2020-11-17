@@ -30,9 +30,28 @@ class MyEnum extends Enum
 }
 
 
-$value = new MyEnum(MyEnum::foo);
+$myEnum = new MyEnum(MyEnum::foo);
 
-assert($value->value() === MyEnum::foo); // true
+assert($myEnum->value() === MyEnum::foo); // true
+
+```
+
+```php
+<?php // for php 5
+
+use SimpleEnum\Enum;
+
+class MyEnum extends Enum
+{
+    const foo = 1;
+    const bar = 2;
+    const baz = 3;
+}
+
+
+$myEnum = new MyEnum(MyEnum::foo);
+
+$myEnum->value() === MyEnum::foo; // true
 
 ```
 
