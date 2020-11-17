@@ -6,7 +6,7 @@
 
 Dead simple PHP enum. This thing runs on PHP 5.3, heck maybe even PHP 5.1.2*, so just yoink the file if you need it for your Legacy project.
 
-<sub><sup>&ast; This enum uses the Reflection class, which was introduced in PHP 5.1.2</sup></sub>
+<sub>&ast; This enum uses the Reflection class, which was introduced in PHP 5.1.2</sup>
 
 ## Why?
 I come from C-like languages with proper enums. Why is there no such simple, built-in, proper, enum in PHP?
