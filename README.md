@@ -29,7 +29,6 @@ class MyEnum extends Enum
     const baz = 3;
 }
 
-
 $myEnum = new MyEnum(MyEnum::foo);
 
 assert($myEnum->value() === MyEnum::foo); // true
