@@ -24,25 +24,6 @@ use SimpleEnum\Enum;
 
 class MyEnum extends Enum
 {
-    public const foo = 1;
-    public const bar = 2;
-    public const baz = 3;
-}
-
-
-$myEnum = new MyEnum(MyEnum::foo);
-
-assert($myEnum->value() === MyEnum::foo); // true
-
-```
-
-```php
-<?php // for php 5
-
-use SimpleEnum\Enum;
-
-class MyEnum extends Enum
-{
     const foo = 1;
     const bar = 2;
     const baz = 3;
@@ -51,7 +32,7 @@ class MyEnum extends Enum
 
 $myEnum = new MyEnum(MyEnum::foo);
 
-$myEnum->value() === MyEnum::foo; // true
+assert($myEnum->value() === MyEnum::foo); // true
 
 ```
 
@@ -63,4 +44,3 @@ composer require vladdesv/simple-enum
 
 ## License
 MIT © [Vladimirs Nordholm](https://github.com/vladdeSV)
-
