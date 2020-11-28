@@ -39,7 +39,9 @@ class EnumTest extends PHPUnit_Framework_TestCase
      */
     public function testEqualEnums(Enum $a, Enum $b, $isEqual)
     {
-        self::assertSame($isEqual, $a->equals($b));
+        // workaround to get phpunit 4.0.0 to run on php >=7
+        // comparing booleans in 'assertSame' causes fatal error
+        self::assertTrue($a->equals($b) === $isEqual);
     }
 
     /**
