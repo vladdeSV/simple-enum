@@ -42,6 +42,21 @@ abstract class Enum
     }
 
     /**
+     * Compare if two enums are same class and have equal value
+     *
+     * @param Enum $other
+     * @return bool
+     */
+    public function equals(self $other)
+    {
+        if (get_class($this) !== get_class($other)) {
+            return false;
+        }
+
+        return $this->value === $other->value;
+    }
+
+    /**
      * @var mixed
      */
     private $value;

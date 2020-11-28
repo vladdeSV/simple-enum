@@ -1,10 +1,10 @@
 <?php
 
-namespace SimpleEnum\Tests;
+namespace SimpleEnum\Tests\TestEnums;
 
 use SimpleEnum\Enum;
 
-class TestEnum extends Enum
+class FooEnum extends Enum
 {
     const foo = 1;
     const bar = 2;

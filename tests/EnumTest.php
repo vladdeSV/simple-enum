@@ -4,15 +4,18 @@ namespace SimpleEnum\Tests;
 
 use Exception;
 use PHPUnit_Framework_TestCase;
+use SimpleEnum\Enum;
+use SimpleEnum\Tests\TestEnums\BarEnum;
+use SimpleEnum\Tests\TestEnums\FooEnum;
 use stdClass;
 
 class EnumTest extends PHPUnit_Framework_TestCase
 {
     public function testCreateSimpleEnum()
     {
-        $testEnum = new TestEnum(TestEnum::foo);
+        $FooEnum = new FooEnum(FooEnum::foo);
 
-        self::assertSame(TestEnum::foo, $testEnum->value());
+        self::assertSame(FooEnum::foo, $FooEnum->value());
     }
 
     /**
@@ -22,9 +25,21 @@ class EnumTest extends PHPUnit_Framework_TestCase
      */
     public function testValidValues($value)
     {
-        $testEnum = new TestEnum($value);
+        $FooEnum = new FooEnum($value);
 
-        self::assertSame($value, $testEnum->value());
+        self::assertSame($value, $FooEnum->value());
+    }
+
+    /**
+     * @dataProvider compareEqualValues
+     *
+     * @param Enum $a
+     * @param Enum $b
+     * @param bool $isEqual
+     */
+    public function testEqualEnums(Enum $a, Enum $b, $isEqual)
+    {
+        self::assertSame($isEqual, $a->equals($b));
     }
 
     /**
@@ -34,17 +49,17 @@ class EnumTest extends PHPUnit_Framework_TestCase
      */
     public function testInvalidValue($value)
     {
-        new TestEnum($value);
+        new FooEnum($value);
     }
 
     public function validValues()
     {
         return array(
-            array(TestEnum::foo),
+            array(FooEnum::foo),
             array(1),
-            array(TestEnum::bar),
+            array(FooEnum::bar),
             array(2),
-            array(TestEnum::baz),
+            array(FooEnum::baz),
             array(3),
         );
     }
@@ -57,9 +72,19 @@ class EnumTest extends PHPUnit_Framework_TestCase
             array("1"),
             array(null),
             array(array(123)),
-            array(array(1,2,3)),
+            array(array(1, 2, 3)),
             array(new stdClass()),
-            array((string)TestEnum::foo),
+            array((string)FooEnum::foo),
+        );
+    }
+
+    public function compareEqualValues()
+    {
+        return array(
+            array(new FooEnum(FooEnum::foo), new FooEnum(FooEnum::foo), true),
+            array(new FooEnum(FooEnum::foo), new FooEnum(FooEnum::bar), false),
+            array(new FooEnum(FooEnum::foo), new BarEnum(BarEnum::a), false),
+            array(new FooEnum(FooEnum::foo), new BarEnum(BarEnum::b), false),
         );
     }
 }
