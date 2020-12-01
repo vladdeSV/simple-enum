@@ -13,7 +13,7 @@ I come from C-like languages with proper enums. Why is there no such simple, bui
 
 The [SplEnum](https://www.php.net/manual/en/class.splenum.php) looks promising, but has some oddities with its implementation. As an added bonus, it might not work for [your setup](https://stackoverflow.com/a/57885080).
 
-Other third party alternatives (see [this](https://github.com/spatie/enum), [this](https://github.com/myclabs/php-enum), and [this](https://github.com/marc-mabe/php-enum) for instance) are overly complicated for my needs. This should probably solve it for most of my use cases.
+Other third-party alternatives (see [this](https://github.com/spatie/enum), [this](https://github.com/myclabs/php-enum), [this](https://github.com/DASPRiD/Enum), and [this](https://github.com/marc-mabe/php-enum) for instance) are overly complicated for my needs. This should probably solve it for most of my use cases.
 
 ## Example
 
