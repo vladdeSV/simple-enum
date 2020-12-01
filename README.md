@@ -4,7 +4,7 @@
 [![minimum php version](https://img.shields.io/packagist/php-v/vladdesv/simple-enum?color=8892BF&logo=php&labelColor=24292E)](https://github.com/vladdeSV/simple-enum/blob/master/composer.json#L25)
 [![master](https://github.com/vladdeSV/simple-enum/workflows/master/badge.svg)](https://github.com/vladdeSV/simple-enum/actions?query=workflow%3Amaster)
 
-Dead simple PHP enum. This thing runs on PHP 5.3, heck maybe even PHP 5.1.2*, so just yoink the file if you need it for your Legacy project.
+Dead simple PHP enum. This thing runs on PHP 5.3, heck maybe even PHP 5.1.2*, so just yoink the files if you need it for your Legacy project.
 
 <sub>&ast; This enum uses the Reflection class, which was introduced in PHP 5.1.2</sup>
 
