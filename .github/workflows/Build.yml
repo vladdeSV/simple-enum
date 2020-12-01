@@ -13,13 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: Setup PHP with pecl extension
+      - name: Setup PHP 5.3
         uses: shivammathur/setup-php@v2
         with:
           php-version: '5.3'
-          
-      - name: Verify PHP version
-        run: php -v
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
