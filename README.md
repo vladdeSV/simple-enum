@@ -32,6 +32,7 @@ class MyEnum extends Enum
 $myEnum = new MyEnum(MyEnum::foo);
 
 assert($myEnum->value() === MyEnum::foo); // true
+assert($myEnum->equals(new MyEnum(1)));
 
 ```
 
